@@ -1,0 +1,14 @@
+﻿global using CoffeeMachine.API.APIPolicies;
+global using CoffeeMachine.API.Filters;
+global using CoffeeMachine.API.Middleware;
+global using CoffeeMachine.API.Swagger;
+global using CoffeeMachine.Application;
+global using CoffeeMachine.Application.Contracts;
+global using CoffeeMachine.Application.Exceptions;
+global using CoffeeMachine.Application.Models;
+global using CoffeeMachine.Application.Models.Constants;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.AspNetCore.Mvc.Filters;
+global using Microsoft.AspNetCore.RateLimiting;
+global using System.Net;
+global using System.Text.Json;
