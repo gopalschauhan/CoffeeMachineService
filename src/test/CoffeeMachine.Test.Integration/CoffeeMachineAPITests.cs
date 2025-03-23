@@ -39,7 +39,7 @@ namespace CoffeeMachine.Test.Integration
             Assert.True(successResult.Count() == 4);
             Assert.NotNull(contents);
             Assert.True(successResult.FirstOrDefault()!.IsSuccessStatusCode);
-            Assert.True(contents.message == "Your piping hot coffee is ready");
+            Assert.True(contents.message == "Your piping hot coffee is ready" || contents.message == "Your refreshing iced coffee is ready") ;
 
             Assert.NotNull(errorResult);
             Assert.True(!errorResult.FirstOrDefault()?.IsSuccessStatusCode);

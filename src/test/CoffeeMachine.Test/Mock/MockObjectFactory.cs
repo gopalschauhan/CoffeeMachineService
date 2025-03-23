@@ -16,11 +16,31 @@
             return mockCoffeeMachineService;
         }
 
-        public static IConfiguration CreateIConfigurationMock(int day, int month)
+        public static Mock<IWeatherService> CreateWeatherServiceMock(double currentTemperature)
+        {
+            var response = new WeatherDetails
+            {
+                City = "Melbourne",
+                Country = "Australia",
+                Longitude = 43423.334,
+                Latitude = 343.545,
+                CurrentTemperatureCelcius = currentTemperature,
+                CurrentTemperatureFahrenheit = 60
+            };
+
+            var mockWeatherService = new Mock<IWeatherService>();
+            mockWeatherService.Setup(ws => ws.GetRealTimeWeatherData()).Returns(Task.FromResult(response));
+
+            return mockWeatherService;
+        }
+
+        public static IConfiguration CreateIConfigurationMock(int day, int month, int temperatureThreshold = 30)
         {
             var inMemoryConfigSettings = new Dictionary<string, string> {
                 {"MonthOfServiceUnavailability:Day", Convert.ToString(day)},
-                {"MonthOfServiceUnavailability:Month", Convert.ToString(month)}
+                {"MonthOfServiceUnavailability:Month", Convert.ToString(month)},
+                {"WeatherAPIUrl", "https://api.weatherapi.com/v1/current.json?q=melbourne&key=17d2a82abb2c4d4aae4151745252203"},
+                {"HotTemperatureThreshold", Convert.ToString(temperatureThreshold)}
             };
             IConfiguration configuration = new ConfigurationBuilder()
                 .AddInMemoryCollection(inMemoryConfigSettings!).Build();
@@ -81,6 +101,22 @@
             });
 
             return requestDelegate;
+        }
+
+        public static Mock<IMapper> CreateIMapperMock() 
+        {
+            var automapper = new Mock<IMapper>();
+
+            automapper.Setup(am => am.Map<object, object>(It.IsAny<object>, It.IsAny<object>)).Returns(new WeatherDetails
+            {
+                City = "Melbourne",
+                Country = "Australia",
+                Longitude = 43423.334,
+                Latitude = 343.545,
+                CurrentTemperatureCelcius = 30,
+                CurrentTemperatureFahrenheit = 60
+            });
+            return automapper;
         }
     }
 }

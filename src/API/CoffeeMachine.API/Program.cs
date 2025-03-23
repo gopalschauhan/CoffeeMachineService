@@ -8,6 +8,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.RegisterSwagger();
 builder.Services.RegisterRateLimitPolicy(builder.Configuration);
 builder.Services.RegisterApplicationService();
+builder.Services.RegisterInfrastructureService();
 
 var app = builder.Build();
 

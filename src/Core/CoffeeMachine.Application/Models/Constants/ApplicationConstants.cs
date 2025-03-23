@@ -7,5 +7,7 @@
         public const string APIRateLimitWindow = "RateLimit:Window";
         public const string DayOfServiceUnavailability = "MonthOfServiceUnavailability:Day";
         public const string MonthOfServiceUnavailability = "MonthOfServiceUnavailability:Month";
+        public const string WeatherAPIUrl = "WeatherAPIUrl";
+        public const string HotTemperatureThreshold = "HotTemperatureThreshold";
     }
 }

@@ -1,10 +1,12 @@
-﻿global using CoffeeMachine.API.Controllers;
+﻿global using AutoMapper;
+global using CoffeeMachine.API.Controllers;
 global using CoffeeMachine.API.Filters;
 global using CoffeeMachine.API.Middleware;
 global using CoffeeMachine.Application.Contracts;
 global using CoffeeMachine.Application.Exceptions;
 global using CoffeeMachine.Application.Models;
 global using CoffeeMachine.Application.Services;
+global using CoffeeMachine.Infrastructure.Services;
 global using CoffeeMachine.Test.Mock;
 global using Microsoft.AspNetCore.Http;
 global using Microsoft.AspNetCore.Mvc;
