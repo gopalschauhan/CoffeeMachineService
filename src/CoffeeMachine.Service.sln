@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeMachine.API", "API\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeMachine.Test.Integration", "test\CoffeeMachine.Test.Integration\CoffeeMachine.Test.Integration.csproj", "{BE96226C-BDE0-4EA8-BAC6-75D529512EFE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{B6D374C8-C341-4D8D-964E-1243A72C875D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeMachine.Infrastructure", "Infrastructure\CoffeeMachine.Infrastructure\CoffeeMachine.Infrastructure.csproj", "{1CB2285E-5BA9-4DF4-8026-568B9731947D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,10 @@ Global
 		{BE96226C-BDE0-4EA8-BAC6-75D529512EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE96226C-BDE0-4EA8-BAC6-75D529512EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE96226C-BDE0-4EA8-BAC6-75D529512EFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CB2285E-5BA9-4DF4-8026-568B9731947D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CB2285E-5BA9-4DF4-8026-568B9731947D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CB2285E-5BA9-4DF4-8026-568B9731947D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CB2285E-5BA9-4DF4-8026-568B9731947D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +56,7 @@ Global
 		{B3D0F085-0977-46E1-9E09-DBB425160C8B} = {8FA2BA0E-4D75-4111-85DA-3A974F639946}
 		{218DD442-AF6F-4795-8144-EEAA217AF89C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{BE96226C-BDE0-4EA8-BAC6-75D529512EFE} = {8FA2BA0E-4D75-4111-85DA-3A974F639946}
+		{1CB2285E-5BA9-4DF4-8026-568B9731947D} = {B6D374C8-C341-4D8D-964E-1243A72C875D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E72CF2E0-5C28-48B8-AD4B-E9D9307575BC}

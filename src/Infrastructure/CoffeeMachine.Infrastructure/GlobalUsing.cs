@@ -1,0 +1,10 @@
+﻿global using AutoMapper;
+global using CoffeeMachine.Application.Contracts;
+global using CoffeeMachine.Application.Models;
+global using CoffeeMachine.Infrastructure.Models;
+global using CoffeeMachine.Infrastructure.Services;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using System.Net.Http.Json;
+global using System.Reflection;
+global using CoffeeMachine.Application.Models.Constants;
